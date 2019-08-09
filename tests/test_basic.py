@@ -8,9 +8,9 @@ import fastseriation.seriate
 import numpy
 
 
-class TestSeriationMethods(unittest.TestCase):
+class TestFastSeriationMethods(unittest.TestCase):
 
-    def test_seriation(self):
+    def test_fastseriation_1(self):
 
         scores_original = numpy.zeros((10000, 10))
         for i in range(100):
