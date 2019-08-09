@@ -3,9 +3,12 @@ import fastseriation.covert_raw_to_rank_matrix
 import fastseriation.get_similarity_matrix
 
 
-def seriate(input_matrix):
-    rank_matrix = fastseriation.covert_raw_to_rank_matrix.convert_raw_to_rank_matrix(input_matrix)
-    similarity_matrix = fastseriation.get_similarity_matrix.get_similarity_matrix(rank_matrix)
+def seriate(input_matrix, use_rank=False):
+    if use_rank:
+        rank_matrix = fastseriation.covert_raw_to_rank_matrix.convert_raw_to_rank_matrix(input_matrix)
+        similarity_matrix = fastseriation.get_similarity_matrix.get_similarity_matrix(input_matrix)
+    else:
+        similarity_matrix = fastseriation.get_similarity_matrix.get_similarity_matrix(input_matrix)
 
     K = numpy.cumsum(similarity_matrix, axis=0)
     K = K[-1, :]
