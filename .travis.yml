@@ -1,0 +1,14 @@
+language: python
+python:
+  - "3.7"
+
+install:
+  - pip -r requirements
+  - pip install codecov
+
+script:
+  - cd tests
+  - coverage run test_basic.py
+
+after_success:
+  - codecov
