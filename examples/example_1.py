@@ -1,8 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy
 import fastseriation.seriate
-from scipy.spatial.distance import pdist
-from seriate import seriate
 
 if __name__ == "__main__":
 
@@ -16,14 +14,14 @@ if __name__ == "__main__":
     plt.show(block=False)
 
     per = numpy.random.permutation(100)
-    scores = scores[per, :]
-
-    seriated_indexes = fastseriation.seriate.seriate(scores)
+    scores_pertutated = scores[per, :]
 
     plt.figure()
-    plt.imshow(scores[seriated_indexes, :], cmap='brg', interpolation='nearest', aspect='auto')
+    plt.imshow(scores_pertutated, cmap='brg', interpolation='nearest', aspect='auto')
     plt.show(block=False)
 
+    seriated_indexes = fastseriation.seriate.seriate(scores_pertutated)
+
     plt.figure()
-    plt.imshow(seriate(pdist(scores)), cmap='brg', interpolation='nearest', aspect='auto')
+    plt.imshow(scores_pertutated[seriated_indexes, :], cmap='brg', interpolation='nearest', aspect='auto')
     plt.show()
