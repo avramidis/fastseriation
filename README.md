@@ -47,8 +47,6 @@ An example code that uses fastseriation is the following
 import matplotlib.pyplot as plt
 import numpy
 import fastseriation.seriate
-from scipy.spatial.distance import pdist
-from seriate import seriate
 
 scores = numpy.zeros((100, 10))
 for i in range(100):
@@ -67,10 +65,6 @@ seriated_indexes = fastseriation.seriate.seriate(scores)
 plt.figure()
 plt.imshow(scores[seriated_indexes, :], cmap='brg', interpolation='nearest', aspect='auto')
 plt.show(block=False)
-
-plt.figure()
-plt.imshow(seriate(pdist(scores)), cmap='brg', interpolation='nearest', aspect='auto')
-plt.show()
 ```
 
 ## License
