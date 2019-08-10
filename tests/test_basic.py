@@ -2,7 +2,7 @@ import unittest
 import sys
 import numpy
 
-sys.path.append('../fastseriation')
+sys.path.append('..')
 import fastseriation.seriate
 
 
