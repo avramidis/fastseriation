@@ -1,8 +1,8 @@
 # fastseriation
 
 [![license: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/avramidis/fastseriation/blob/master/LICENSE)
-[![Build Status](https://travis-ci.org/avramidis/tenpinbowling.svg?branch=master)](https://travis-ci.org/avramidis/fastseriation)
-[![codecov](https://codecov.io/gh/avramidis/tenpinbowling/branch/master/graph/badge.svg)](https://codecov.io/gh/avramidis/fastseriation)
+[![Build Status](https://travis-ci.org/avramidis/fastseriation.svg?branch=master)](https://travis-ci.org/avramidis/fastseriation)
+[![codecov](https://codecov.io/gh/avramidis/fastseriation/branch/master/graph/badge.svg)](https://codecov.io/gh/avramidis/fastseriation)
 
 fastseriation is a Python package that can be used to seriate matrices.
 
