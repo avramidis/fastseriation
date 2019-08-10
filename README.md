@@ -58,12 +58,12 @@ plt.imshow(scores, cmap='brg', interpolation='nearest', aspect='auto')
 plt.show(block=False)
 
 per = numpy.random.permutation(100)
-scores = scores[per, :]
+scores_permutation = scores[per, :]
 
-seriated_indexes = fastseriation.seriate.seriate(scores)
+seriated_indexes = fastseriation.seriate.seriate(scores_permutation)
 
 plt.figure()
-plt.imshow(scores[seriated_indexes, :], cmap='brg', interpolation='nearest', aspect='auto')
+plt.imshow(scores_permutation[seriated_indexes, :], cmap='brg', interpolation='nearest', aspect='auto')
 plt.show(block=False)
 ```
 
